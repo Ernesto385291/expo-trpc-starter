@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Expo documentation
+    url: https://docs.expo.dev/
+    about: Check Expo docs for framework-specific behavior.
+  - name: tRPC documentation
+    url: https://trpc.io/docs
+    about: Check tRPC docs for client and server API details.
