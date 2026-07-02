@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "expo-trpc-starter",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true
@@ -14,7 +14,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "predictiveBackGestureEnabled": false
     },
     "web": {
       "bundler": "metro",

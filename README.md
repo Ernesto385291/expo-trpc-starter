@@ -46,6 +46,7 @@ Then press:
 
 ```bash
 bun run start       # Start Expo
+bun run reset-project # Move starter code aside and create a blank src/app
 bun run ios         # Start Expo and open iOS
 bun run android     # Start Expo and open Android
 bun run web         # Start Expo for web
@@ -61,6 +62,7 @@ src/
   app/
     _layout.tsx              # App providers and navigation shell
     index.tsx                # Example screen
+    api/hello+api.ts         # Minimal Expo API Route example
     api/trpc/[trpc]+api.ts   # Expo API Route for tRPC
   components/
     hello.tsx                # Example tRPC query consumer
@@ -73,7 +75,11 @@ src/
   trpc/
     query-client.ts          # TanStack Query defaults
     react.tsx                # tRPC React provider/client
+scripts/
+  reset-project.js           # Reset to a blank Expo Router src/app
 ```
+
+This follows the current `create-expo-app` convention of using `src/app` for Expo Router. Unlike the default template, this starter keeps `web.output` set to `server` because Expo API Routes need a server bundle.
 
 ## How tRPC Is Wired
 
@@ -132,6 +138,17 @@ Use ngrok, Cloudflare Tunnel, or another tunnel only when:
 For production native builds that call Expo Router API Routes, deploy the server and configure the Expo Router `origin` in `app.json`, or set `EXPO_PUBLIC_API_URL` to your deployed API origin.
 
 ## Adding API Routes
+
+Expo API Routes live in `src/app` and use the `+api.ts` file suffix.
+
+A minimal route looks like this:
+
+```ts
+// src/app/api/hello+api.ts
+export function GET() {
+  return Response.json({ hello: "world" });
+}
+```
 
 Create a router:
 
