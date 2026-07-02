@@ -16,11 +16,10 @@
     "noUncheckedIndexedAccess": true,
 
     /* Module Resolution */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "jsx": "react-native",
 
     /* Path Aliases */
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }

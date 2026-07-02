@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a reproducible problem
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report this.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction
+      description: List exact steps to reproduce the issue.
+      placeholder: |
+        1. Run `bun run start`
+        2. Open iOS simulator
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iOS simulator
+        - iOS device
+        - Android emulator
+        - Android device
+        - Web
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Paste relevant terminal, Metro, or device logs.
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: Commit or version
+      description: Which commit, branch, or release are you using?
