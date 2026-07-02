@@ -12,7 +12,9 @@ This project loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.
 - tRPC v11, TanStack Query, SuperJSON, and Zod wiring.
 - React Native focus and network handling for TanStack Query.
 - Public open-source project docs and GitHub templates.
+- Reset script aligned with the current `create-expo-app` `src/app` structure.
 
 ### Changed
 
 - tRPC client uses relative `/api/trpc` by default for Expo Router API routes.
+- Documented the Expo Router folder layout verified from a fresh Expo project.
